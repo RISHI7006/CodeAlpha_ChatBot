@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechNest Support Chatbot</title>
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="dark-mode">
+  <div class="layout-container">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-header">
+        <div class="brand-logo">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <div class="brand-text">
+          <h2>Tech<span>Nest</span></h2>
+          <p>Support Chatbot</p>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-tab="home">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </button>
+        <button class="nav-item" data-tab="nlp-config">
+          <i class="fa-solid fa-gear"></i>
+          <span>NLP Configuration</span>
+        </button>
+        <button class="nav-item" data-tab="corpus">
+          <i class="fa-solid fa-chart-simple"></i>
+          <span>Corpus Overview</span>
+        </button>
+        <button class="nav-item" data-tab="faq-mgmt">
+          <i class="fa-regular fa-file-lines"></i>
+          <span>FAQ Management</span>
+        </button>
+        <button class="nav-item" data-tab="analytics">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Analytics</span>
+        </button>
+      </nav>
+
+      <!-- Stats Cards -->
+      <div class="sidebar-stats">
+        <div class="stat-card">
+          <div class="stat-icon blue">
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-title">Total FAQs</span>
+            <div class="stat-value-row">
+              <span class="stat-number" id="sidebarFaqCount">25</span>
+              <span class="stat-badge green">↑ +12%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon pink">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-title">Categories</span>
+            <div class="stat-value-row">
+              <span class="stat-number" id="sidebarCatCount">9</span>
+              <span class="stat-badge active">● Active</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dark Mode Switch -->
+      <div class="sidebar-footer">
+        <div class="theme-switch-wrapper">
+          <div class="theme-label">
+            <i class="fa-solid fa-sun" id="themeIcon"></i>
+            <span>Dark Mode</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="themeCheckbox" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN VIEW -->
+    <main class="main-content">
+      
+      <!-- Top Bar Header -->
+      <header class="top-header">
+        <div class="header-left"></div>
+        <div class="header-right">
+          <button class="btn-deploy" id="deployBtn">
+            <i class="fa-solid fa-rocket"></i> Deploy
+          </button>
+          <button class="btn-icon" title="Options">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- TAB 1: HOME (Dashboard) -->
+      <section class="tab-pane active" id="tab-home">
+        
+        <!-- Hero Section -->
+        <div class="hero-banner">
+          <div class="hero-text-content">
+            <div class="nlp-pill-badge">
+              <i class="fa-solid fa-robot"></i> Powered by NLP (Tokenization • Lemmatization • Cosine Similarity)
+            </div>
+            <h1 class="hero-headline">
+              Hi there! 👋<br>
+              I'm your <span class="gradient-text">TechNest</span> Support Chatbot
+            </h1>
+            <p class="hero-description">
+              Get instant answers to your questions about orders, returns, refunds, shipping, payments, warranties and more. Type your question below or try one of the examples.
+            </p>
+          </div>
+
+          <!-- Exact 3D Mascot Graphic -->
+          <div class="hero-mascot-wrapper">
+            <img src="/static/img/robot_mascot.png" alt="TechNest Robot Mascot" class="mascot-img">
+          </div>
+        </div>
+
+        <!-- Popular Questions Section -->
+        <div class="section-container" id="popularQuestionsSection">
+          <div class="section-header-row">
+            <div class="section-title">
+              <h3><i class="fa-solid fa-lightbulb yellow-icon"></i> Popular Questions</h3>
+              <p>Click on a question or type your own below</p>
+            </div>
+            <a href="javascript:void(0)" class="view-all-link" id="viewAllFaqsBtn">View All FAQs →</a>
+          </div>
+
+          <div class="popular-grid">
+            <div class="popular-card card-purple" data-query="How can I track my order?">
+              <div class="card-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+              <div class="card-text">How can I track my order?</div>
+              <div class="card-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+
+            <div class="popular-card card-green" data-query="What is your return policy?">
+              <div class="card-icon"><i class="fa-solid fa-rotate-left"></i></div>
+              <div class="card-text">What is your return policy?</div>
+              <div class="card-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+
+            <div class="popular-card card-blue" data-query="What payment methods do you accept?">
+              <div class="card-icon"><i class="fa-solid fa-credit-card"></i></div>
+              <div class="card-text">Do you accept PayPal or Apple Pay?</div>
+              <div class="card-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+
+            <div class="popular-card card-amber" data-query="How do I file a warranty claim for a defective item?">
+              <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="card-text">How do I file a warranty claim?</div>
+              <div class="card-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- What can I help you with? Section -->
+        <div class="section-container category-panel-section" id="helpCategoriesSection">
+          <div class="section-box-wrapper">
+            <div class="section-header-row" style="margin-bottom: 14px;">
+              <div class="section-title">
+                <h3><i class="fa-solid fa-sparkles purple-icon"></i> What can I help you with?</h3>
+                <p>I can assist you with the following topics and more</p>
+              </div>
+            </div>
+
+            <div class="categories-grid">
+              <div class="category-card" data-cat="Orders & Tracking">
+                <div class="cat-icon-box purple"><i class="fa-solid fa-cart-shopping"></i></div>
+                <div class="cat-content">
+                  <h4>Orders</h4>
+                  <p>Tracking, status, cancellation</p>
+                </div>
+              </div>
+
+              <div class="category-card" data-cat="Returns & Refunds">
+                <div class="cat-icon-box green"><i class="fa-solid fa-rotate-left"></i></div>
+                <div class="cat-content">
+                  <h4>Returns</h4>
+                  <p>Return policy, procedure</p>
+                </div>
+              </div>
+
+              <div class="category-card" data-cat="Returns & Refunds">
+                <div class="cat-icon-box pink"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                <div class="cat-content">
+                  <h4>Refunds</h4>
+                  <p>Refund status, timelines</p>
+                </div>
+              </div>
+
+              <div class="category-card" data-cat="Shipping & Delivery">
+                <div class="cat-icon-box blue"><i class="fa-solid fa-truck"></i></div>
+                <div class="cat-content">
+                  <h4>Shipping</h4>
+                  <p>Delivery time, shipping charges</p>
+                </div>
+              </div>
+
+              <div class="category-card" data-cat="Payment & Billing">
+                <div class="cat-icon-box amber"><i class="fa-solid fa-credit-card"></i></div>
+                <div class="cat-content">
+                  <h4>Payments</h4>
+                  <p>Payment methods, failed payments</p>
+                </div>
+              </div>
+
+              <div class="category-card" data-cat="Warranty & Repairs">
+                <div class="cat-icon-box indigo"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="cat-content">
+                  <h4>Warranties</h4>
+                  <p>Warranty claims, coverage details</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- TAB 2: NLP CONFIGURATION -->
+      <section class="tab-pane" id="tab-nlp-config">
+        <div class="pane-inner">
+          <h2><i class="fa-solid fa-gear"></i> NLP Engine Configuration</h2>
+          <p class="pane-sub">Adjust the similarity threshold and view algorithm details.</p>
+          
+          <div class="config-card">
+            <div class="config-field">
+              <label>Similarity Threshold (Cosine Cutoff)</label>
+              <div class="slider-row">
+                <input type="range" id="paneThresholdSlider" min="0.10" max="0.80" step="0.02" value="0.32">
+                <span class="threshold-badge" id="paneThresholdVal">0.32</span>
+              </div>
+              <span class="field-hint">Minimum required similarity score to accept an FAQ match.</span>
+            </div>
+
+            <div class="config-field">
+              <label>Vectorization Technique</label>
+              <select class="styled-select" disabled>
+                <option selected>TF-IDF (Term Frequency - Inverse Document Frequency) with N-grams (1, 2)</option>
+              </select>
+            </div>
+
+            <div class="config-field">
+              <label>NLP Preprocessing Components</label>
+              <div class="tags-group">
+                <span class="tag-badge">NLTK Tokenizer</span>
+                <span class="tag-badge">Contraction Normalization</span>
+                <span class="tag-badge">Stopword Removal</span>
+                <span class="tag-badge">WordNet POS Lemmatization</span>
+                <span class="tag-badge">Cosine Similarity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: CORPUS OVERVIEW -->
+      <section class="tab-pane" id="tab-corpus">
+        <div class="pane-inner">
+          <div class="corpus-header-row">
+            <div>
+              <h2><i class="fa-solid fa-chart-simple"></i> FAQ Corpus Overview</h2>
+              <p class="pane-sub">Browse, search, and inspect the FAQ knowledge base.</p>
+            </div>
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="corpusSearchInput" placeholder="Search FAQs...">
+            </div>
+          </div>
+
+          <div class="corpus-table-container">
+            <div class="faq-list-rendered" id="corpusListContainer"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: FAQ MANAGEMENT -->
+      <section class="tab-pane" id="tab-faq-mgmt">
+        <div class="pane-inner">
+          <h2><i class="fa-regular fa-file-lines"></i> Add New FAQ</h2>
+          <p class="pane-sub">Expand the chatbot knowledge base by adding new questions and answers.</p>
+
+          <form class="faq-form" id="newFaqForm">
+            <div class="form-group">
+              <label>Question *</label>
+              <input type="text" id="newQuestion" placeholder="e.g. Can I exchange my product for another color?" required>
+            </div>
+            <div class="form-group">
+              <label>Category *</label>
+              <select id="newCategory" class="styled-select" required>
+                <option value="Orders & Tracking">Orders & Tracking</option>
+                <option value="Returns & Refunds">Returns & Refunds</option>
+                <option value="Shipping & Delivery">Shipping & Delivery</option>
+                <option value="Payment & Billing">Payment & Billing</option>
+                <option value="Account & Security">Account & Security</option>
+                <option value="Warranty & Repairs">Warranty & Repairs</option>
+                <option value="Discounts & Promotions">Discounts & Promotions</option>
+                <option value="Product & Stock">Product & Stock</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Answer *</label>
+              <textarea id="newAnswer" rows="4" placeholder="Enter the official chatbot answer..." required></textarea>
+            </div>
+            <div class="form-group">
+              <label>Keywords / Tags (comma separated)</label>
+              <input type="text" id="newTags" placeholder="e.g. exchange, color, replace">
+            </div>
+            <button type="submit" class="btn-primary">
+              <i class="fa-solid fa-plus"></i> Save to Knowledge Base
+            </button>
+            <div id="faqSuccessMsg" class="success-message" style="display: none;"></div>
+          </form>
+        </div>
+      </section>
+
+      <!-- TAB 5: ANALYTICS -->
+      <section class="tab-pane" id="tab-analytics">
+        <div class="pane-inner">
+          <h2><i class="fa-solid fa-chart-pie"></i> Support Chatbot Analytics</h2>
+          <p class="pane-sub">Live metrics on user questions, resolution rates, and category frequency.</p>
+          
+          <div class="analytics-metrics-grid">
+            <div class="analytics-card">
+              <span class="metric-title">Total Questions Answered</span>
+              <span class="metric-number" id="analyticsTotalQuestions">0</span>
+              <span class="metric-sub green">↑ 100% Automated</span>
+            </div>
+            <div class="analytics-card">
+              <span class="metric-title">Average Match Confidence</span>
+              <span class="metric-number" id="analyticsAvgConfidence">92%</span>
+              <span class="metric-sub green">High Precision</span>
+            </div>
+            <div class="analytics-card">
+              <span class="metric-title">Knowledge Base Health</span>
+              <span class="metric-number">100%</span>
+              <span class="metric-sub">All FAQs Indexed</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FLOATING CHAT PANEL (Slides in when user asks a question, shows ONLY clean answer) -->
+      <div class="chat-overlay-modal" id="chatOverlayModal" style="display: none;">
+        <div class="chat-overlay-content">
+          <div class="chat-overlay-header">
+            <div class="chat-header-title">
+              <div class="chat-header-avatar"><i class="fa-solid fa-robot"></i></div>
+              <div>
+                <h4>TechNest Support Assistant</h4>
+                <p>Instant Answers • Online</p>
+              </div>
+            </div>
+            <div class="chat-header-actions">
+              <button class="btn-clear-chat" id="clearChatMessagesBtn" title="Clear messages">Clear</button>
+              <button class="btn-close-overlay" id="closeChatModalBtn" title="Close chat"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+          </div>
+
+          <div class="messages-container" id="messagesContainer">
+            <!-- Messages rendered cleanly here without code/vector analysis -->
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM CHAT INPUT BAR (Matches exact screenshot) -->
+      <footer class="bottom-input-bar">
+        <div class="main-input-wrapper">
+          <button class="attachment-btn" title="Sample question" id="suggestPromptBtn">
+            <i class="fa-solid fa-paperclip"></i>
+          </button>
+          <form class="main-input-form" id="mainChatForm">
+            <input 
+              type="text" 
+              id="userQuestionInput" 
+              placeholder="Ask a question about your order, return, shipping, etc..." 
+              autocomplete="off" 
+              required
+            />
+            <button type="submit" class="send-action-btn" title="Send question">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <script src="/static/js/chat.js"></script>
+</body>
+</html>

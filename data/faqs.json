@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "category": "Orders & Tracking",
+    "question": "How can I track my order?",
+    "answer": "You can track your order by navigating to 'My Orders' in your account dashboard and clicking 'Track Order'. We also send real-time tracking links to your registered email and SMS once your package ships.",
+    "tags": ["track", "order", "status", "shipment", "location"]
+  },
+  {
+    "id": 2,
+    "category": "Orders & Tracking",
+    "question": "Can I cancel or modify my order after placing it?",
+    "answer": "You can cancel or modify your order within 60 minutes of placing it via the 'Order Details' page. After 60 minutes, the order enters processing and packaging, but you can still request a free return once delivered.",
+    "tags": ["cancel", "modify", "change", "edit", "order"]
+  },
+  {
+    "id": 3,
+    "category": "Orders & Tracking",
+    "question": "What should I do if my package says delivered but I haven't received it?",
+    "answer": "First, check around your porch, mailbox, and with neighbors. Couriers occasionally mark packages delivered a few hours early. If it has not arrived after 24 hours, contact our support team and we will initiate a carrier trace or issue a replacement.",
+    "tags": ["missing", "lost", "delivered", "package", "not received"]
+  },
+  {
+    "id": 4,
+    "category": "Returns & Refunds",
+    "question": "What is your return policy?",
+    "answer": "We offer a 30-day hassle-free return policy on all eligible electronics and accessories. Items must be in their original packaging and condition with all included cables, manuals, and accessories.",
+    "tags": ["return", "policy", "days", "refund", "exchange"]
+  },
+  {
+    "id": 5,
+    "category": "Returns & Refunds",
+    "question": "How long does it take to receive a refund?",
+    "answer": "Once our warehouse inspects the returned item (usually within 2-3 business days), refunds are processed to your original payment method. Depending on your bank, credit card refunds typically reflect within 3 to 7 business days.",
+    "tags": ["refund", "time", "duration", "bank", "money back"]
+  },
+  {
+    "id": 6,
+    "category": "Returns & Refunds",
+    "question": "Do I have to pay for return shipping?",
+    "answer": "No, domestic return shipping is completely free! Once you initiate a return in your account, we provide a prepaid, downloadable return shipping label.",
+    "tags": ["return shipping", "prepaid label", "fee", "cost"]
+  },
+  {
+    "id": 7,
+    "category": "Shipping & Delivery",
+    "question": "What are your shipping rates and estimated delivery times?",
+    "answer": "Standard shipping (3-5 business days) is FREE on orders above $50, or $4.99 otherwise. Express 2-day delivery is available for $9.99, and Next-Day Air is $19.99 at checkout.",
+    "tags": ["shipping", "rates", "delivery time", "express", "overnight", "cost"]
+  },
+  {
+    "id": 8,
+    "category": "Shipping & Delivery",
+    "question": "Do you ship internationally?",
+    "answer": "Yes, we ship to over 60 countries worldwide. International shipping rates and estimated customs/duties are calculated automatically at checkout based on destination.",
+    "tags": ["international", "worldwide", "overseas", "customs", "countries"]
+  },
+  {
+    "id": 9,
+    "category": "Shipping & Delivery",
+    "question": "How do I change my shipping address?",
+    "answer": "If your order has not yet been processed (usually within 1 hour of placement), you can update the shipping address directly in 'My Orders'. If it has already shipped, please contact our support team immediately so we can attempt a carrier reroute.",
+    "tags": ["change address", "shipping address", "update location"]
+  },
+  {
+    "id": 10,
+    "category": "Payment & Billing",
+    "question": "What payment methods do you accept?",
+    "answer": "We accept major credit/debit cards (Visa, MasterCard, American Express, Discover), PayPal, Apple Pay, Google Pay, and buy-now-pay-later services including Klarna and Afterpay.",
+    "tags": ["payment", "methods", "credit card", "paypal", "apple pay", "google pay"]
+  },
+  {
+    "id": 11,
+    "category": "Payment & Billing",
+    "question": "Is my payment information safe and secure?",
+    "answer": "Yes. All transactions are protected with industry-standard 256-bit SSL encryption and processed via PCI-DSS Level 1 certified payment gateways. We never store your full card credentials on our servers.",
+    "tags": ["security", "safe", "encryption", "pci", "credit card safety"]
+  },
+  {
+    "id": 12,
+    "category": "Payment & Billing",
+    "question": "Why was my payment declined?",
+    "answer": "Payment declines typically occur due to incorrect billing addresses, insufficient funds, security flags from your bank, or expired card details. Please verify your billing postal code with your bank or try an alternate payment method like PayPal.",
+    "tags": ["declined", "failed", "card error", "billing error"]
+  },
+  {
+    "id": 13,
+    "category": "Account & Security",
+    "question": "How do I reset my account password?",
+    "answer": "Click 'Sign In', select 'Forgot Password', enter your registered email address, and we will send you a password reset link valid for 24 hours.",
+    "tags": ["forgot password", "reset password", "login", "credentials"]
+  },
+  {
+    "id": 14,
+    "category": "Account & Security",
+    "question": "How do I enable two-factor authentication (2FA)?",
+    "answer": "Navigate to 'Account Settings' > 'Security' and toggle on 'Two-Factor Authentication'. You can use an authenticator app (such as Google Authenticator or Authy) or receive SMS verification codes.",
+    "tags": ["2fa", "two factor", "security", "authenticator", "otp"]
+  },
+  {
+    "id": 15,
+    "category": "Account & Security",
+    "question": "How do I delete my account and personal data?",
+    "answer": "You can request account deletion under 'Account Settings' > 'Privacy & Data' > 'Delete Account'. In accordance with GDPR and CCPA, all personal identifiers will be permanently purged within 30 days.",
+    "tags": ["delete account", "privacy", "gdpr", "remove data"]
+  },
+  {
+    "id": 16,
+    "category": "Warranty & Repairs",
+    "question": "Do your products come with a warranty?",
+    "answer": "All new hardware and electronics come with a 1-year standard manufacturer warranty covering defects in materials and craftsmanship. Extended 2-year and 3-year accidental damage protection plans can be purchased during checkout.",
+    "tags": ["warranty", "guarantee", "protection", "repair", "defect"]
+  },
+  {
+    "id": 17,
+    "category": "Warranty & Repairs",
+    "question": "How do I file a warranty claim for a defective item?",
+    "answer": "To file a warranty claim, visit 'Support' > 'Warranty Claim', submit your serial number and invoice ID, along with a brief description or photo of the defect. Our hardware support team reviews claims within 48 hours.",
+    "tags": ["warranty claim", "broken", "defective", "malfunction", "repair"]
+  },
+  {
+    "id": 18,
+    "category": "Customer Support",
+    "question": "How can I contact human customer support?",
+    "answer": "Our human support team is available 24/7! You can chat with a representative via Live Chat on this site, email support@technest.example.com, or call us toll-free at 1-800-555-TECH (Monday through Friday, 8 AM - 8 PM EST).",
+    "tags": ["contact", "human", "agent", "live support", "phone number", "email"]
+  },
+  {
+    "id": 19,
+    "category": "Customer Support",
+    "question": "What are your customer support operating hours?",
+    "answer": "Our live chat and email support operate 24/7/365. Phone support lines are open Monday through Friday from 8:00 AM to 8:00 PM EST, and Saturdays from 9:00 AM to 5:00 PM EST.",
+    "tags": ["hours", "operation", "availability", "schedule", "open"]
+  },
+  {
+    "id": 20,
+    "category": "Discounts & Promotions",
+    "question": "Do you offer student, military, or healthcare discounts?",
+    "answer": "Yes! We offer a 10% discount for verified students, educators, active military, veterans, and healthcare professionals through our partnership with ID.me. Verify your status at checkout to apply your discount.",
+    "tags": ["student discount", "military discount", "healthcare", "promo code", "voucher"]
+  },
+  {
+    "id": 21,
+    "category": "Discounts & Promotions",
+    "question": "How do I apply a discount promo code to my purchase?",
+    "answer": "During checkout, on the 'Payment' review page, enter your promo code in the 'Gift Card or Promo Code' box and click 'Apply'. The discount will instantly reflect on your order total.",
+    "tags": ["promo code", "coupon", "discount", "voucher", "apply"]
+  },
+  {
+    "id": 22,
+    "category": "Product & Stock",
+    "question": "How do I know if an item is in stock?",
+    "answer": "Product stock status is displayed in real-time on each product page. If an item is sold out, you can click 'Notify Me When Available' to receive an instant email as soon as inventory is replenished.",
+    "tags": ["stock", "available", "inventory", "sold out", "restock"]
+  },
+  {
+    "id": 23,
+    "category": "Product & Stock",
+    "question": "Are your refurbished products certified and tested?",
+    "answer": "Yes! All certified refurbished products undergo a rigorous 40-point inspection, thorough cleaning, and functional testing. They come with genuine accessories, packaging, and our full 90-day warranty.",
+    "tags": ["refurbished", "certified", "renewed", "tested", "used"]
+  },
+  {
+    "id": 24,
+    "category": "Orders & Tracking",
+    "question": "Can I ship to a P.O. Box or APO/FPO military address?",
+    "answer": "Yes, we ship to P.O. Boxes and APO/FPO/DPO military addresses via standard USPS shipping. Expedited express delivery options are not available for P.O. boxes.",
+    "tags": ["po box", "apo", "fpo", "military address", "box"]
+  },
+  {
+    "id": 25,
+    "category": "Payment & Billing",
+    "question": "Do you offer price matching if an item drops in price?",
+    "answer": "Yes! We offer a 14-day price protection guarantee. If an item you purchased drops in price on our site or an authorized retailer within 14 days of delivery, contact support for a refund of the difference.",
+    "tags": ["price match", "price drop", "guarantee", "difference"]
+  }
+]
